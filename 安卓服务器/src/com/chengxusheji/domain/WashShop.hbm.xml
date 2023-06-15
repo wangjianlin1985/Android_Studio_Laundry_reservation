@@ -1,0 +1,91 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="WashShop" table="WashShop">
+
+          <!-- 主键洗衣店账号 -->
+          <id name="shopUserName" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 登录密码 -->
+          <property
+            name="password"
+            column="password"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 洗衣店名称 -->
+          <property
+            name="shopName"
+            column="shopName"
+            type="string"
+            length="50"
+          />
+
+          <!-- 多对一属性: 洗衣店种类 -->
+          <many-to-one name="washClassObj"
+            column="washClassObj"
+            class="WashClass"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单图片属性: 洗衣店照片 -->
+          <property
+            name="shopPhoto"
+            column="shopPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 店家电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单日期型属性: 入驻日期 -->
+          <property
+            name="addDate"
+            column="addDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 店铺地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="80"
+          />
+
+          <!-- 简单浮点型属性: 纬度 -->
+          <property
+            name="latitude"
+            column="latitude"
+            type="float"
+          />
+
+          <!-- 简单浮点型属性: 经度 -->
+          <property
+            name="longitude"
+            column="longitude"
+            type="float"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

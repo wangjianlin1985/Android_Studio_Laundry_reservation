@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+ android:layout_width="fill_parent" 
+ android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">  
+<LinearLayout 
+	android:orientation="vertical" 
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:background="@android:color/white">
+	<include layout="@layout/title" />
+	<TableLayout 
+		android:layout_width="fill_parent" 
+		android:layout_height="fill_parent" 
+		android:stretchColumns="1">
+		<TableRow> 
+			<TextView 
+				android:text="洗衣套餐：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<EditText
+				android:text="" 
+				android:id="@+id/ET_mealName"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:singleLine="true"
+				android:ellipsize="end"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="发布日期：" 
+				android:id="@+id/TextView3"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<DatePicker
+				android:id="@+id/dp_publishDate" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="left" />
+		</TableRow> 
+		<TableRow>
+			<TextView 
+				android:text="       " 
+				android:id="@+id/TextView1"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+    		<CheckBox 
+    		    android:text="发布日期参与查询" 
+    		    android:id="@+id/cb_publishDate" 
+    		    android:layout_width="wrap_content" 
+    		    android:layout_height="wrap_content"/>
+		</TableRow>
+		<TableRow> 
+			<TextView 
+				android:text="洗衣店种类：" 
+				android:id="@+id/TextView2"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<Spinner android:id="@+id/Spinner_washClassObj" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+		</TableRow>
+		
+		<TableRow> 
+			<TextView 
+				android:text="排序规则：" 
+				android:id="@+id/TextView5"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"/>
+			<Spinner android:id="@+id/Spinner_orderRule" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"/>
+		</TableRow>
+		
+	</TableLayout>
+	<LinearLayout 
+		android:orientation="horizontal" 
+		android:layout_width="fill_parent"
+		android:layout_height="55dp" 
+		android:gravity="center">  
+		   <Button  
+				android:text="查询"
+				android:id="@+id/btnQuery"
+				android:layout_width="match_parent"
+				android:layout_height="48dp" 
+				android:layout_marginLeft="10dip"
+				android:layout_marginRight="10dip"
+				android:layout_marginTop="5dip"
+				android:background="#D64F4D"
+				android:textColor="@color/white" /> 
+	</LinearLayout>
+  </LinearLayout>
+</ScrollView>
+
+
+

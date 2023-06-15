@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MainUserActivity"></activity>
+        <activity android:name="MainShopActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="UserInfoListActivity"></activity>
+        <activity android:name="UserInfoQueryActivity"></activity>
+        <activity android:name="UserInfoAddActivity"></activity>
+        <activity android:name="UserInfoEditActivity"></activity>
+        <activity android:name="UserInfoDetailActivity"></activity>
+        <activity android:name="WashClassListActivity"></activity>
+        <activity android:name="WashClassQueryActivity"></activity>
+        <activity android:name="WashClassAddActivity"></activity>
+        <activity android:name="WashClassEditActivity"></activity>
+        <activity android:name="WashClassDetailActivity"></activity>
+        <activity android:name="WashMealListActivity"></activity>
+        <activity android:name="WashMealShopListActivity"></activity>
+        <activity android:name="WashMealUserListActivity"></activity>
+        <activity android:name="WashMealQueryActivity"></activity>
+        <activity android:name="WashMealUserQueryActivity"></activity>
+        <activity android:name="WashMealAddActivity"></activity>
+        <activity android:name="WashMealShopAddActivity"></activity>
+        <activity android:name="WashMealEditActivity"></activity>
+        <activity android:name="WashMealDetailActivity"></activity>
+        <activity android:name="MealEvaluateListActivity"></activity>
+        <activity android:name="MealEvaluateUserListActivity"></activity>
+        <activity android:name="MealEvaluateQueryActivity"></activity>
+        <activity android:name="MealEvaluateAddActivity"></activity>
+        <activity android:name="MealEvaluateUserAddActivity"></activity>
+        <activity android:name="MealEvaluateEditActivity"></activity>
+        <activity android:name="MealEvaluateDetailActivity"></activity>
+        <activity android:name="OrderInfoListActivity"></activity>
+        <activity android:name="OrderInfoShopListActivity"></activity>
+        <activity android:name="OrderInfoUserListActivity"></activity>
+        <activity android:name="OrderInfoQueryActivity"></activity>
+        <activity android:name="OrderInfoShopQueryActivity"></activity>
+        <activity android:name="OrderInfoUserQueryActivity"></activity>
+        <activity android:name="OrderInfoAddActivity"></activity>
+        <activity android:name="OrderInfoUserAddActivity"></activity>
+        <activity android:name="OrderInfoEditActivity"></activity>
+        <activity android:name="OrderInfoDetailActivity"></activity>
+        <activity android:name="OrderStateListActivity"></activity>
+        <activity android:name="OrderStateQueryActivity"></activity>
+        <activity android:name="OrderStateAddActivity"></activity>
+        <activity android:name="OrderStateEditActivity"></activity>
+        <activity android:name="OrderStateDetailActivity"></activity>
+        <activity android:name="WashShopListActivity"></activity>
+        <activity android:name="WashShopQueryActivity"></activity>
+        <activity android:name="WashShopAddActivity"></activity>
+        <activity android:name="WashShopEditActivity"></activity>
+        <activity android:name="WashShopDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+        
+         <meta-data
+		    android:name="com.baidu.lbsapi.API_KEY"
+		    android:value="lhXbYqdhhGKbUGwRLqpTDEK1QoDYSOmq" >
+		</meta-data>
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote"> </service>
+        
+        
+    </application>
+
+  
+	
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+   <!-- <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission> --> 
+	
+	
+    
+     <!-- 这个权限用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+	<!-- 这个权限用于访问GPS定位-->
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+	<!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+	<!-- 获取运营商信息，用于支持提供运营商信息相关的接口-->
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+	<!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+	<!-- 用于读取手机当前的状态-->
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+	<!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据-->
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+	<!-- 访问网络，网络定位需要上网-->
+	<uses-permission android:name="android.permission.INTERNET" />
+	<!-- SD卡读取权限，用户写入离线定位数据-->
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+	 
+	<uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" /> 
+	<!--读取系统信息，包含系统版本等信息，用作统计  -->
+	<uses-permission android:name="android.permission.WRITE_SETTINGS" /> 
+	<!-- 鉴权所需该权限获取进程列表  -->
+	<uses-permission android:name="android.permission.GET_TASKS" /> 
+	<!-- 使用步行AR导航，配置Camera权限 -->
+	<uses-permission android:name="android.permission.CAMERA" />  
+	
+</manifest>

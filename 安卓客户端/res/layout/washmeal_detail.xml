@@ -1,0 +1,184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#F5F5F5"
+    android:orientation="vertical" >
+<include layout="@layout/title" />
+<ScrollView
+ android:layout_width="fill_parent" 
+ android:layout_height="fill_parent"
+xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout 
+	android:orientation="vertical" 
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	 android:background="@android:color/white">
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:stretchColumns="1">
+	    <TableRow> 
+			<TextView 
+				android:text="套餐id：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff" 
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_mealId" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="洗衣套餐：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_mealName" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="套餐说明：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_introduce" 
+				android:layout_width="60dp"
+				android:layout_height="wrap_content"
+				android:inputType="textMultiLine"
+				android:singleLine="false"
+				android:scrollHorizontally="false"
+			/>
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="套餐价格：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_price" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="套餐图片：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+		  <ImageView android:id="@+id/iv_mealPhoto" 
+        	android:layout_width="250dp"  
+        	android:layout_height="250dp"  
+        	android:src="@drawable/noimage" 
+        	/>  
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="发布日期：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_publishDate" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+		</TableRow>
+	    <TableRow>
+			<TextView
+				android:text="洗衣店：" 
+				android:id="@+id/TextView"
+				android:layout_width="wrap_content" 
+				android:layout_height="wrap_content"
+				android:textColor="#0000ff"
+			/>
+			<TextView
+				android:text="" 
+				android:id="@+id/TV_washShopObj" 
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+		</TableRow>
+	</TableLayout>
+	<LinearLayout 
+		android:orientation="vertical" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:gravity="center">
+	    	<Button
+		       android:text="查看店铺"
+		       android:id="@+id/btnShop"
+		       android:layout_width="match_parent"
+		       android:layout_height="48dp"
+		       android:layout_marginLeft="10dip"
+		       android:layout_marginRight="10dip"
+		       android:layout_marginTop="20dip"
+		       android:background="#D64F4D"
+		       android:textColor="@color/white" />
+	    	
+	    	<Button
+		       android:text="我要下单"
+		       android:id="@+id/btnOrder"
+		       android:layout_width="match_parent"
+		       android:layout_height="48dp"
+		       android:layout_marginLeft="10dip"
+		       android:layout_marginRight="10dip"
+		       android:layout_marginTop="20dip"
+		       android:background="#D64F4D"
+		       android:textColor="@color/white" />
+	    	
+	    	<Button
+		       android:text="查看评价"
+		       android:id="@+id/btnEvaluate"
+		       android:layout_width="match_parent"
+		       android:layout_height="48dp"
+		       android:layout_marginLeft="10dip"
+		       android:layout_marginRight="10dip"
+		       android:layout_marginTop="20dip"
+		       android:background="#1ab394"
+		       android:textColor="@color/white" />
+	    	
+	    	
+		   <Button
+		       android:text="返回"
+		       android:id="@+id/btnReturn"
+		       android:layout_width="match_parent"
+		       android:layout_height="48dp"
+		       android:layout_marginLeft="10dip"
+		       android:layout_marginRight="10dip"
+		       android:layout_marginTop="20dip"
+		       android:background="#1ab394"
+		       android:textColor="@color/white"
+		       android:visibility="gone" />
+	</LinearLayout>
+  </LinearLayout>
+</ScrollView>
+</LinearLayout>
+
+

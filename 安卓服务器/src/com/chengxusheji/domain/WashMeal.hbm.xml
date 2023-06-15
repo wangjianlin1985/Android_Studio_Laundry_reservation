@@ -1,0 +1,68 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="WashMeal" table="WashMeal">
+
+          <!-- 主键套餐id -->
+          <id name="mealId" column="mealId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 洗衣套餐 -->
+          <property
+            name="mealName"
+            column="mealName"
+            type="string"
+            length="60"
+          />
+
+          <!-- 简单字符串属性: 套餐说明 -->
+          <property
+            name="introduce"
+            column="introduce"
+            type="string"
+            length="2000"
+          />
+
+          <!-- 简单浮点型属性: 套餐价格 -->
+          <property
+            name="price"
+            column="price"
+            type="float"
+          />
+
+          <!-- 简单图片属性: 套餐图片 -->
+          <property
+            name="mealPhoto"
+            column="mealPhoto"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单日期型属性: 发布日期 -->
+          <property
+            name="publishDate"
+            column="publishDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 多对一属性: 洗衣店 -->
+          <many-to-one name="washShopObj"
+            column="washShopObj"
+            class="WashShop"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
